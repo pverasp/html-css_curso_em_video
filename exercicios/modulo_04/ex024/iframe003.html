@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        iframe#tela {
+            width: 95vh;
+            height: 400px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha.</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nesciunt eaque esse reiciendis, alias consequatur odio itaque eos ipsum rem! Cum delectus magnam blanditiis iure nemo eligendi sint? Ipsam, amet.</p>
+
+    <ul>
+        <li><a href="paginas-extras/pagina001.html" target="frame">Primeira página.</a></li>
+        <li><a href="paginas-extras/pagina002.html" target="frame">Segunda página.</a></li>
+        <li><a href="paginas-extras/pagina003.html" target="frame">Terceira página</a></li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi doloribus, deleniti magnam quis optio repellendus eos ab, fugiat magni officiis quos inventore perferendis quaerat et sequi! Unde expedita voluptatum adipisci.</p>
+
+    <iframe id="tela" name="frame" srcdoc="<h1>Escolha uma das opções acima</h1> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quos ipsa consequatur ipsam veniam? Deserunt provident, veritatis ab nesciunt quo ipsam possimus, repellat eligendi ullam officia vel laborum totam est.</p><img src='imagens/bugdroid.png'><img src='imagens/cursoemvideo.png'>">
+        <p>Infelismente seu navegador não é compatível com iframe.</p>
+    </iframe>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quod dignissimos. Ratione, alias eligendi architecto facere obcaecati itaque perferendis in odit sapiente officiis soluta consequatur nesciunt modi, doloribus, amet explicabo.</p>
+</body>
+</html>
