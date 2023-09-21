@@ -10,11 +10,24 @@
     <form action="cadastro.html" method="get" autocomplete="on">
         <p>
             <label for="inome">Nome</label>
-            <input type="text" name="nome" id="inome" placeholder="Nome completo" maxlength="30" required autocomplete="name">
+            <input type="text" name="nome" id="inome" placeholder="Nome completo" maxlength="30" required autocomplete="name" required>
         </p>
         <p>
             <label for="imedia">Média</label>
-            <input type="number" name="media" id="imedia" max="10" min="0" step="0.1" placeholder="0 a 10">
+            <input type="number" name="media" id="imedia" max="10" min="0" step="0.1" placeholder="0 a 10" required
+            >
+        </p>
+        <P>
+            <label for="iperiodo">Período</label>
+            <input type="month" name="periodo" id="iperiodo">
+        </P>
+        <P>
+            <label for="idiaprova">Dia da prova</label>
+            <input type="date" name="diaprova" id="idiaprova" value="2023-09-19">
+        </P>
+        <p>
+            <label for="ihora">Horário da prova</label>
+            <input type="time" name="hora" id="ihora">
         </p>
         <p>
             <input type="submit" value="Enviar">
