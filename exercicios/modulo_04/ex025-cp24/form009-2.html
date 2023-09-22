@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.html" method="get" autocomplete="on">
+        <p>
+            <label for="inumero1">Número 1</label>
+            <input type="number" name="numero1" id="inumero1" min="0" max="50" required oninput= "funcSoma()">
+        </p>
+        <p>
+            <label for="inumero2">Número 2</label>
+            <input type="number" name="numero2" id="inumero2" min="0" max="50" required oninput= "funcSoma()">
+        </p>
+        <p>
+            <label for="isoma">Soma com 'funcSoma' = </label>
+            <output name="soma" id="isoma">0</output>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <script>
+        function funcSoma() {
+            isoma.innerHTML = Number(inumero1.value) + Number(inumero2.value)
+        }
+    </script>
+    
+</body>
+</html>
