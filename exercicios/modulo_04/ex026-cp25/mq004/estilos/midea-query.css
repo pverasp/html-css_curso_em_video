@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+/* Todas as demais mídias */
+/* 
+  Typical Device Breakpoints 
+-----------------------------
+Pequenas telas: Até 600px;
+Celular: De 600 a 768px;
+Tablet: De 768 a 992px; 
+Desktop: De 992 a 1200px;
+Grandes telas: Acima de 1200px.
+*/
+/* Impressão */
+@media print {
+    * {
+
+        font-family: 'Courier New', Courier, monospace;
+    }
+    body {
+        /* background-image: url("../imagens/back-print.jpg"); */
+    }
+    main {
+        width: 100vw;
+        border: 2px solid black;
+        font-size: 1em;
+    }
+    h1 {
+        text-shadow: none;
+        color: black;
+        font-size: 1.3em;
+    }
+    main::after {
+        content: "Impresso pelo site www.cursoemvideo.com.br";
+        text-decoration: overline;
+    }
+    img#phone { display: none; }
+    img#tablet { display: none }
+    img#print { display: block; }
+    img#pc { display: none; }
+    img#tv { display: none; }
+
+}
+/*Dispositivos Pequenos
+@media screen and (max: 600px) { }
+@media screen and (min:600px) and (max: 768px) { }*/
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 992px) { 
+    body {
+        background-image: url("../imagens/back-tablet.jpg");
+    }
+    img#phone { display: none; }
+    img#tablet { display: block }
+    img#print { display: none; }
+    img#pc { display: none; }
+    img#tv { display: none; }
+}
+/* Desktop */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body {
+        background-image: url("../imagens/back-pc.jpg");
+    }
+    img#phone { display: none; }
+    img#tablet { display: none }
+    img#print { display: none; }
+    img#pc { display: block; }
+    img#tv { display: none; }
+
+ }
+/* Grandes Telas */
+@media screen and (min-width: 1200px) { 
+    body {
+        background-image: url("../imagens/back-tv.jpg");
+    }
+    main {
+        width: 700px;
+    }
+    img#phone { display: none; }
+    img#tablet { display: none }
+    img#print { display: none; }
+    img#pc { display: none; }
+    img#tv { display: block; }
+
+
+}
+
