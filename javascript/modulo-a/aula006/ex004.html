@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>Exercício 4</h1>
+    
+    <script>
+        var nome = window.prompt('Qual é o seu nome?')
+        document.write(`<h2>Olá, ${nome}! Seu nome tem ${nome.length} letras.</h2>`)
+        document.write(`<h2>Seu nome em maiúsculas é ${nome.toUpperCase()}.</h2>`)
+        document.write(`<h2>Seu nome em minúsculas é ${nome.toLowerCase()}.</h2>`)
+        // FORMATANDO NÚMEROS Em MOEDAS
+        var n1 = Number(prompt('Converter um número em formato de moeda. Digite um número:'))
+        //Definindo as decimais
+        document.write(`${n1} com duas decimais é ${n1.toFixed(2)} <br>`)
+        document.write(`${n1} em Reais é ${n1.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})} <br>`)
+        document.write(`${n1} em Dólar US é ${n1.toLocaleString('pt-br',{style: 'currency', currency: 'USD'})} <br>`)
+        document.write(`${n1} em Euros é ${n1.toLocaleString('pt-br',{style: 'currency', currency: 'EUR'})} <br>`)
+    </script>
+</body>
+</html>
