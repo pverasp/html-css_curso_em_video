@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(113, 140, 222);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <P class="teste">Aqui vai o resultado.</P>
+    <p class="teste">Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg" name="msg" class="teste">Clique em mim.</div>
+    <script>
+         window.document.write("Olá Mundão <br>")
+         window.document.write(window.document.charset)
+         window.document.write("<br>") 
+         window.document.write(window.navigator.appName)
+         window.document.write("<br>") 
+         window.document.write(window.document.URL)
+         //Selecionando o primeiro paragrafo
+         var p1 = window.document.getElementsByTagName('p')[0]
+         p1.style.color = 'blue' //Definindo a cor de p1 para blue
+         //capturando o texto de p1
+         window.document.write('<br> o texto do primeiro parágrafo é: ' + p1.innerText)
+         //Alterando a cor do background de body
+        //  window.document.body.style.background='blue'
+        //Selecionando o segundo paragrafo
+        var p2 = window.document.getElementsByTagName('p')[1]
+        // window.alert('<br>'+p1.innerHTML) //innerHTML captura o texto da tag com a formatação HTML
+        // window.alert('<br>'+p2.innerText) //innerText captura o texto da tag SEM a formatação HTML
+        //Selecionando por ID
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Nova Mensagem . . .'
+        var d2 = window.document.getElementsByName('msg')[0]
+        d2.innerText='Olá'
+        var d3 = window.document.querySelector('div#msg')
+        d3.innerText = 'Deu certo! de novo'
+        var teste = window.document.querySelectorAll('.teste')[2]
+        teste.style.background = 'gray'
+    </script>
+    
+</body>
+</html>
