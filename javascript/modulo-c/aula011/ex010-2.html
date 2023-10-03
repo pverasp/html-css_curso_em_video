@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulado Brasileiro</title>
+</head>
+<body>
+    <h1>Verificando Nacionalidade</h1>
+    <form action="">
+        <label for="ipais">Qual país você vive?</label>
+        <input type="text" name="pais" id="ipais">
+        <input type="button" value="Verificar" onclick="checar()">
+    </form>
+    <div id="resposta"></div>
+    <script>
+        function checar() {
+            var ipais = window.document.querySelector('input#ipais')
+            var res = window.document.querySelector('div#resposta')
+            pais = ipais.value
+            if (pais == '') {
+                res.innerHTML = `<p> Digite o País em que vive!</p>`
+            } else {
+                res.innerHTML = `<p>Você vive em <strong>${pais}</strong>.</p> `
+                if (pais != 'Brasil') {
+                    res.innerHTML += `<p>Você é <strong>Estrangeiro</strong>.</p> `
+                } else {
+                    res.innerHTML += `<p>Você é <strong>Brasileiro</strong>.</p> `
+                }
+            }
+        }
+    </script>
+</body>
+</html>
