@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <div>
+            <form action="cadastro.php" method="get">
+                <p>
+                    <label for="itxtano">Ano de nascimento</label>
+                    <input type="number" name="txtano" id="itxtano" min="0">
+                </p>
+                <p>
+                    <label for="itxtmesano">Mês e ano de nascimento</label>
+                    <input type="month" name="txtmesano" id="itxtmesano">
+                </p>
+                <fieldset>
+                    <legend>Sexo</legend>
+                    <input type="radio" name="radsex" id="itxtsexo-masc" value="M" checked>
+                    <label for="itxtsexo-masc">Masculino</label>
+                    <input type="radio" name="radsex" id="itxtsexo-fem" value="F">
+                    <label for="itxtsexo-fem">Feminino</label>
+                </fieldset>
+                <p>
+                    <input type="button" value="Verificar" onclick="verificar()">
+                    <input type="submit" value="teste">
+                </p>
+            </form>
+        </div>
+        <div id="resultado">
+            
+        </div>
+    </section>
+    <footer>
+        <p>
+            &copy; Cursoemvídeo
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
