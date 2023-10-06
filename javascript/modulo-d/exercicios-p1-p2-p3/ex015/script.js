@@ -1,7 +1,6 @@
 function verificar() {
     var data = new Date()
     var ano = data.getFullYear()
-    var mes = data.getMonth()
     
     var fano = window.document.getElementById('itxtano')
     var res = window.document.querySelector('div#resultado')
