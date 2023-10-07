@@ -5,8 +5,6 @@ function verificar() {
     var fano = window.document.getElementById('itxtano')
     var res = window.document.querySelector('div#resultado')
 
-    
-
     if (fano.value.length == 0 || Number(fano.value) > ano) {
         window.alert('Verifique os dados e tente novamente!')
     } else {
