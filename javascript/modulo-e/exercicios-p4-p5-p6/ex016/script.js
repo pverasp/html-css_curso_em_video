@@ -10,9 +10,14 @@ function contar(){
     var numPasso = Number(txtpasso.value)
 
     var resultado = ''
-    for (numInicio; numInicio<=numFim; numInicio+=numPasso) {
-        resultado += `${numInicio} -> `
+    if (numPasso<=0){
+        window.alert('Passo inválido! Coniderando  passo = 1')
+        numPasso = 1
     }
-    res.innerHTML=resultado
+    for (numInicio; numInicio<=numFim; numInicio+=numPasso) {
+        resultado += `${numInicio} 👉 `
+    }
+    resultado += `🏳️`
+    res.innerHTML=resultado 
 
 }
