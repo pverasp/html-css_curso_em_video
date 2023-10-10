@@ -10,14 +10,15 @@ function contar(){
     var numPasso = Number(txtpasso.value)
 
     var resultado = ''
-    if (numPasso<=0){
+    if (txtinicio.value=='') {
+        resultado ='Impossível contar!'
+    } else if (numPasso<=0){
         window.alert('Passo inválido! Coniderando  passo = 1')
         numPasso = 1
+        for (numInicio; numInicio<=numFim; numInicio+=numPasso) {
+            resultado += `${numInicio} 👉 `
+        }
+        resultado += `🏳️`
     }
-    for (numInicio; numInicio<=numFim; numInicio+=numPasso) {
-        resultado += `${numInicio} 👉 `
-    }
-    resultado += `🏳️`
     res.innerHTML=resultado 
-
 }
