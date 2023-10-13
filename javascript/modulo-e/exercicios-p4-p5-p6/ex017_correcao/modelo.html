@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Exercício</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <section>
+        <div>
+            <form action="" method="get">
+                <label for="ItxtNumero">Número</label>
+                <input type="number" name="txtNumero" id="ItxtNumero" required>
+                <input type="button" value="Gerar Tabuada" onclick="tabuada()">
+            </form>
+        </div>
+        <div id="resposta">
+            <p id="p_resposta">
+                <select name="txtTabuada" id="ItxtTabuada" size = "11" >
+                    <option value="0">Escolha um número acima</option>
+                </select>
+            </p>
+
+        </div>
+    </section>
+    <footer>
+        <p>
+            &copy; Cursoemvídeo
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
