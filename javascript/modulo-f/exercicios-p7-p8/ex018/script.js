@@ -60,15 +60,29 @@ function finalizar() {
         paragrafo.innerHTML = `2 - O menor valor informado foi ${numbersAsc[0]}`
         // paragrafo.innerHTML = numbersAsc
         resultado.appendChild(paragrafo)
-    
+
+        paragrafo = document.createElement('p')
+        paragrafo.innerHTML = `3 - O maior valor informado foi ${maxValorArray()}`
+        resultado.appendChild(paragrafo)
+
+        paragrafo = document.createElement('p')
+        paragrafo.innerHTML = `3 - O menor valor informado foi ${minValorArray()}`
+        resultado.appendChild(paragrafo)
+
+
         let somaValores = funcSoma()
         paragrafo = document.createElement('p')
         paragrafo.innerHTML = `Somando todos os valores temos ${somaValores}`
         resultado.appendChild(paragrafo)
-    
+
+        somaValores = funcSoma2()
+        paragrafo = document.createElement('p')
+        paragrafo.innerHTML = `Somando todos os valores temos ${somaValores}`
+        resultado.appendChild(paragrafo)
+
         paragrafo = document.createElement('p')
         paragrafo.innerHTML = `A média dos valores digitados é ${somaValores/arrayNumeros.length}`
-        resultado.appendChild(paragrafo)            
+        resultado.appendChild(paragrafo)
     }
 }
 function funcMaior() {
@@ -92,4 +106,24 @@ function funcSoma() {
     }
     return vSoma
 }
+function funcSoma2() {
+    //Usando o método .reduce do array
+    let soma = arrayNumeros.reduce(function (a, b) { 
+        return a += b;
+    }, 0);
+    return soma;
+}
 
+function maxValorArray() {
+    var max = arrayNumeros.reduce(function (a, b) { 
+        return Math.max(a, b);
+    }, -Infinity);
+    return max;
+}
+function minValorArray() {
+    var min = arrayNumeros.reduce(function (a, b) {
+        // return a < b ? a : b; 
+        return Math.min(a, b)
+    }, +Infinity)
+    return min
+}
